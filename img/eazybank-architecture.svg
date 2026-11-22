@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">EazyBank service map</title>
+  <desc id="desc">Client traffic enters through Nginx Ingress and the API gateway, then reaches accounts, cards, and loans. Gateway auth and rate limiting use Keycloak and Redis. Accounts exchanges events with Kafka and the message service.</desc>
+  <rect width="1200" height="675" rx="18" fill="#fafaf9"/>
+  <path d="M54 98H1146" stroke="#dededb"/>
+  <text x="58" y="58" fill="#191919" font-family="Inter,Segoe UI,sans-serif" font-size="30" font-weight="750">eazybank</text>
+  <text x="1140" y="56" text-anchor="end" fill="#777773" font-family="Inter,Segoe UI,sans-serif" font-size="15" letter-spacing="1.5">JAVA 21  /  SPRING CLOUD  /  KUBERNETES</text>
+  <text x="60" y="145" fill="#777773" font-family="Inter,Segoe UI,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">REQUEST PATH</text>
+
+  <g fill="none" stroke="#777773" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M180 278H246"/><path d="M404 278H470"/>
+    <path d="M640 278H708V218H748"/><path d="M640 278H748"/><path d="M640 278H708V338H748"/>
+  </g>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#777773"/></marker></defs>
+  <g fill="#fff" stroke="#d7d7d2" stroke-width="2">
+    <rect x="60" y="240" width="120" height="76" rx="8"/>
+    <rect x="246" y="240" width="158" height="76" rx="8"/>
+    <rect x="470" y="224" width="170" height="108" rx="8" stroke="#222"/>
+    <rect x="748" y="184" width="176" height="68" rx="8"/>
+    <rect x="748" y="264" width="176" height="68" rx="8"/>
+    <rect x="748" y="344" width="176" height="68" rx="8"/>
+    <rect x="1000" y="184" width="142" height="68" rx="8"/>
+    <rect x="1000" y="264" width="142" height="68" rx="8"/>
+  </g>
+  <g font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">
+    <text x="120" y="272" fill="#222" font-size="16" font-weight="700">Client</text><text x="120" y="295" fill="#777773" font-size="13">browser</text>
+    <text x="325" y="272" fill="#222" font-size="16" font-weight="700">Nginx Ingress</text><text x="325" y="295" fill="#777773" font-size="13">cluster entry</text>
+    <text x="555" y="270" fill="#222" font-size="17" font-weight="750">API gateway</text><text x="555" y="296" fill="#777773" font-size="13">JWT · rate limit · resilience</text>
+    <text x="836" y="213" fill="#222" font-size="16" font-weight="700">Accounts</text><text x="836" y="235" fill="#777773" font-size="13">CRUD · Kafka events</text>
+    <text x="836" y="293" fill="#222" font-size="16" font-weight="700">Cards</text><text x="836" y="315" fill="#777773" font-size="13">cards API</text>
+    <text x="836" y="373" fill="#222" font-size="16" font-weight="700">Loans</text><text x="836" y="395" fill="#777773" font-size="13">loans API</text>
+    <text x="1071" y="213" fill="#222" font-size="15" font-weight="700">Keycloak</text><text x="1071" y="235" fill="#777773" font-size="13">JWT issuer</text>
+    <text x="1071" y="293" fill="#222" font-size="15" font-weight="700">Redis</text><text x="1071" y="315" fill="#777773" font-size="13">rate limiter</text>
+  </g>
+
+  <path d="M54 466H1146" stroke="#dededb"/>
+  <text x="60" y="505" fill="#777773" font-family="Inter,Segoe UI,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">SUPPORTING SERVICES</text>
+  <g font-family="Inter,Segoe UI,sans-serif" font-size="15">
+    <circle cx="72" cy="550" r="4" fill="#555"/><text x="86" y="555" fill="#333"><tspan font-weight="700">Accounts</tspan><tspan fill="#777773"> → Kafka → message service</tspan></text>
+    <circle cx="72" cy="592" r="4" fill="#555"/><text x="86" y="597" fill="#333"><tspan font-weight="700">All services</tspan><tspan fill="#777773"> → Config Server + Eureka</tspan></text>
+    <text x="1140" y="632" text-anchor="end" fill="#999994" font-size="13">plain Kubernetes manifests · nginx ingress</text>
+  </g>
+</svg>

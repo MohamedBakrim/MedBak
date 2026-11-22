@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Micro-service-ecom service map</title>
+  <desc id="desc">A client calls the billing API. Billing uses OpenFeign to request customer and inventory data. Config Server, Gemini chatbot, and Kafka sandbox are separate modules.</desc>
+  <rect width="1200" height="675" rx="18" fill="#fafaf9"/>
+  <path d="M54 98H1146" stroke="#dededb"/>
+  <text x="58" y="58" fill="#191919" font-family="Inter,Segoe UI,sans-serif" font-size="30" font-weight="750">micro-service-ecom</text>
+  <text x="1140" y="56" text-anchor="end" fill="#777773" font-family="Inter,Segoe UI,sans-serif" font-size="15" letter-spacing="1.5">SPRING BOOT  /  OPENFEIGN</text>
+  <text x="60" y="145" fill="#777773" font-family="Inter,Segoe UI,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">BILLING REQUEST FLOW</text>
+
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#777773"/></marker></defs>
+  <g fill="none" stroke="#777773" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M188 288H280"/><path d="M510 272H612V224H674"/><path d="M510 336H612V392H674"/>
+  </g>
+  <g fill="#fff" stroke="#d7d7d2" stroke-width="2">
+    <rect x="60" y="252" width="128" height="72" rx="8"/>
+    <rect x="280" y="232" width="230" height="112" rx="8" stroke="#222"/>
+    <rect x="674" y="188" width="220" height="72" rx="8"/>
+    <rect x="674" y="356" width="220" height="72" rx="8"/>
+  </g>
+  <g font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">
+    <text x="124" y="282" fill="#222" font-size="16" font-weight="700">Client</text><text x="124" y="304" fill="#777773" font-size="13">GET /bills/{id}</text>
+    <text x="395" y="277" fill="#222" font-size="17" font-weight="750">Billing service</text><text x="395" y="302" fill="#777773" font-size="13">bill endpoint · OpenFeign clients</text><text x="395" y="324" fill="#777773" font-size="13">seeded bill + customer + items</text>
+    <text x="784" y="218" fill="#222" font-size="16" font-weight="700">Customer service</text><text x="784" y="240" fill="#777773" font-size="13">customer API · H2</text>
+    <text x="784" y="386" fill="#222" font-size="16" font-weight="700">Inventory service</text><text x="784" y="408" fill="#777773" font-size="13">product API · H2</text>
+  </g>
+  <text x="536" y="261" fill="#777773" font-family="Inter,Segoe UI,sans-serif" font-size="12" font-weight="700">FEIGN</text>
+  <text x="536" y="379" fill="#777773" font-family="Inter,Segoe UI,sans-serif" font-size="12" font-weight="700">FEIGN</text>
+
+  <path d="M54 482H1146" stroke="#dededb"/>
+  <text x="60" y="521" fill="#777773" font-family="Inter,Segoe UI,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">OTHER MODULES</text>
+  <g font-family="Inter,Segoe UI,sans-serif" font-size="15">
+    <rect x="60" y="544" width="300" height="50" rx="7" fill="#fff" stroke="#d7d7d2"/><text x="78" y="575" fill="#333" font-weight="700">Config Server</text><text x="342" y="575" text-anchor="end" fill="#999994" font-size="13">native config</text>
+    <rect x="450" y="544" width="300" height="50" rx="7" fill="#fff" stroke="#d7d7d2"/><text x="468" y="575" fill="#333" font-weight="700">Gemini chatbot</text><text x="732" y="575" text-anchor="end" fill="#999994" font-size="13">Spring AI</text>
+    <rect x="840" y="544" width="300" height="50" rx="7" fill="#fff" stroke="#d7d7d2"/><text x="858" y="575" fill="#333" font-weight="700">Kafka sandbox</text><text x="1122" y="575" text-anchor="end" fill="#999994" font-size="13">local broker</text>
+  </g>
+  <text x="1140" y="632" text-anchor="end" fill="#999994" font-family="Inter,Segoe UI,sans-serif" font-size="13">standalone modules · no API gateway or Eureka</text>
+</svg>
